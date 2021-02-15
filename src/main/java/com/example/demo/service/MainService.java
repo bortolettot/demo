@@ -19,14 +19,11 @@ public class MainService {
 
 
     public Person find(String name) throws NotFoundException {
-        Example<Person> example = Example.of(new Person(name));
-        Optional<Person> one = repository.findOne(example);
+
+        Person one = repository.lkjflkdsjf(name);
 
 
-        if(!one.isPresent()){
-            throw new NotFoundException("");
-        }
-        return one.get();
+        return one;
     }
 
     public Long save(Person p) {
